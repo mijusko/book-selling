@@ -13,6 +13,10 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Lob
+    @Column(name = "image")
+    private byte[] image;
+
     @Column(name = "title", nullable = false, length = 100)
     private String title;
 
